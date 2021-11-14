@@ -5,3 +5,5 @@ def ggt(m, n):
     else:
         p = n % m
         return ggt(p, m)
+
+print(ggt(15, 12))
