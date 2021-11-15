@@ -23,7 +23,7 @@ def palindrome(liste):
 
     # umgedreht für das umkehren der liste fürs Palindrom
     umgedreht = list(reversed(gereinigt))
-    wort = '-'.join(gereinigt)
+    wort = ''.join(gereinigt)
 
     return (wort.capitalize(), umgedreht==gereinigt)
 
