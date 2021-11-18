@@ -16,18 +16,29 @@
 
 
 # Lösen Sie Aufgabe 1 in dieser Zelle
+
+#Eingabe der Zahl mit Input und als Integer
 number = int(input("Eingabe Benutzer:"))
+
+#Set für die einzigartigen Zahlen
 number_set = set()
+
+#Variable für die SUmme
 total = 0
+
+#For-Schleife zum iterieren der Eingabe
 for digit in str(number):
     int(digit)
 
+    #Überprüfung ob die Zahl bereits im Set vorhanden ist
     if digit in number_set:
         continue
     else:
         number_set.add(digit)
 
+#Iterieren durch das Set für die Summe
 for nums in number_set:
     total=total+int(nums)
 
+#Ausgabe der Summe
 print(total)

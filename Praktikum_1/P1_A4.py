@@ -12,10 +12,14 @@
 # Ausgabe des Programms: `1:10:36:04`
 #
 
-# Lösen Sie Aufgabe 4 in dieser Zelle
-zeit = float(input("Benutzereingabe: "))
+# Lösen Sie Aufgabe 4 in dieser Zelle4
+
+#Eingabe der Sekunden mit Input und zwingend als Integer
+zeit = int(input("Benutzereingabe: "))
 
 #Benutzereingaben umrechnen
+
+#Ganzzahldivison //
 tage = zeit // (24 * 3600)
 zeit = zeit % (24 * 3600)
 stunden = zeit // 3600
@@ -24,5 +28,5 @@ minuten = zeit // 60
 zeit %= 60
 sekunden = zeit
 
-#Ausgabe mit Formatierung
+#Ausgabe mit Formatierung als zweistellige Zahl (%02d)
 print("%d:%02d:%02d:%02d" % (tage, stunden, minuten, sekunden))

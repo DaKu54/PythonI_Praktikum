@@ -41,13 +41,17 @@ get_ipython().run_line_magic('pinfo', 'sorted')
 
 
 # Lösen Sie Aufgabe 3 in dieser Zelle
+
+#Zwei Strings als Input
 s1=input("String1: ")
 s2=input("String2: ")
 print("\n")
 
+#Strings als Lowercase, um Vergleichbarkeit zu gewährleisten
 s1_lower = s1.lower()
 s2_lower = s2.lower()
 
+#Beide Stringe mit sorted-Funktion vergleichen
 if(sorted(s1_lower)==sorted(s2_lower)):
       print(s1 + " und " + s2 + " sind Anagrame")
 else:

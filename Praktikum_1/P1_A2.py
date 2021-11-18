@@ -9,7 +9,7 @@
 
 # Lösen Sie Aufgabe 2 in dieser Zelle
 
-#Eingabe der Kosten
+#Eingabe der Kosten mit input und nur gültig als float
 gericht_kosten = float(input("Kosten: "))
 print("\n")
 
@@ -19,6 +19,7 @@ trinkgeld = (((gericht_kosten-steuern)/100)*23)
 gesamt_ausgaben = gericht_kosten+trinkgeld
 
 #Ausgabe der Berechnungen und Formatierung auf zwei Nachkommastellen
+#%.2f bedeutet, die Zahl wird als float (f) und mit zwei Nachkommastellen (.2) formatiert
 print("Kosten für Gericht (inklusive Steuer): " +  "%.2f" % gericht_kosten + " Euro")
 print("Steuer (19%): " + "%.2f" % steuern + " Euro")
 print("Tringeld (23%): " + "%.2f" % trinkgeld + " Euro")

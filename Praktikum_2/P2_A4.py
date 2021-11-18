@@ -34,38 +34,41 @@ get_ipython().run_line_magic('pinfo', 'randrange')
 
 
 # Lösen Sie Aufgabe 4 in dieser Zelle
+
+#randrage für die zufälligen Zahlen
 from random import randrange
 
+#Listen für die zufälligen Zahlen des Dictionary
 b_list = []
 i_list = []
 n_list = []
 g_list = []
 o_list = []
 
+#Anlegen des Dictionary für die Bingo-Karte
 card = {"B": b_list, "I": i_list, "N": n_list, "G": g_list, "O": o_list, }
 
+#Erstellen der zufälligen Zahlen
 for i in range(0,5):
     n = str(randrange(0, 16, 1))
     b_list.append(n)
 
-for i in range(0,5):
     n = str(randrange(15, 31, 1))
     i_list.append(n)
 
-for i in range(0,5):
     n = str(randrange(30, 46, 1))
     n_list.append(n)
 
-for i in range(0,5):
     n = str(randrange(45, 61, 1))
     g_list.append(n)
 
-for i in range(0,5):
     n = str(randrange(60, 76, 1))
     o_list.append(n)
 
+#Headline printen mit vier Stellen rechtsbüngig (>)
 print(f'{"B":>4}' + f'{"I":>4}' + f'{"N":>4}' + f'{"G":>4}' + f'{"O":>4}')
 
+#Die einzlenen Listen ausgeben
 print(f'{b_list[0]:>4}' + f'{i_list[0]:>4}' + f'{n_list[0]:>4}' + f'{g_list[0]:>4}' +f' {o_list[0]:>4}')
 print(f'{b_list[1]:>4}' + f'{i_list[1]:>4}' + f'{n_list[1]:>4}' + f'{g_list[1]:>4}' +f' {o_list[1]:>4}')
 print(f'{b_list[2]:>4}' + f'{i_list[2]:>4}' + f'{n_list[2]:>4}' + f'{g_list[2]:>4}' +f' {o_list[2]:>4}')

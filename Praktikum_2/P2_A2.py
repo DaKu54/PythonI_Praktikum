@@ -55,8 +55,11 @@ beide_konzerte_besucht = True
 a_aber_nicht_b = set()
 b_aber_nicht_a = set()
 
+#For-Schleife um die Besucher von Konzert A durchzuiterieren
 for a_besucher in concert_A:
+    #Noch eine um auch die Besucher von Konzert B durchzuiterieren
     for b_besucher in concert_B:
+        #Falls die beiden Besucher übereinstimmen, zu dem set hinzufügen
         if a_besucher==b_besucher:
             beide_konzerte.add(a_besucher)
         if a_besucher in concert_B:
@@ -64,7 +67,7 @@ for a_besucher in concert_A:
         else:
             a_aber_nicht_b.add(a_besucher)
             beide_konzerte_besucht = False
-
+        #Einzigartige Besucher von Konzert B suchen
         if b_besucher in concert_A:
             continue
         else:
