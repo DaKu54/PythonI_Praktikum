@@ -1,15 +1,14 @@
-
 def filter_alphanumeric(string):
     import re
 
-    string = re.sub('\W+' ,' ', string  )  # es wird nach allen nicht Alphanumerischen Zeichen(Sondernzeichen) im String gesucht und entfernt
-    # und Wörter dann mit ' ' getrennt
-    # return string
-    leerset = set()
-    for i in string:
-        longest_word = max(string.split(" ") ,key=len)
-        leerset.update([longest_word])
-        return (len(longest_word) ,leerset)
+    longestWord = ""
+    string = re.sub('\W+', ' ', string)  # es wird nach allen nicht Alphanumerischen Zeichen(Sondernzeichen) im String gesucht und entfernt
+
+
+    word_list = string.split()
+    max_len = len(max(word_list, key=len))
+    max_words = [word for word in word_list if len(word)==max_len]
+    print(max_words)
 
 test3 = "HEute heute ist , das Wetter schön schoen !!!!!!"
 
@@ -32,3 +31,5 @@ Sie dürfen jeder Gruppe von Zeichen, die kein Leerzeichen sind, als Wort interp
 sogar wenn diese Zahlen oder Satzzeichen sind.
 """
 filter_alphanumeric(test3)
+
+# help(max)
