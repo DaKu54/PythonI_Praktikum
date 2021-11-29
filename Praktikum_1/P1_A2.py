@@ -5,7 +5,7 @@
 # Steuer (19%): 4.81 Euro
 # Trinkgeld (23%): 4.71 Euro
 # Gesamtausgabe: 30.00 Euro
-# Das erreichen Sie, indem Sie `:.2f` als Formatierungszeichen in `print` für die entsprechenden Variablen verwenden.
+# Das erreichen Sie, indem Sie `:.2f` als Formatierungszeichen in `print` für die entsprechenden woerter_zu_zaehlenn verwenden.
 
 # Lösen Sie Aufgabe 2 in dieser Zelle
 

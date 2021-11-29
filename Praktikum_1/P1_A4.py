@@ -4,7 +4,7 @@
 #
 # `D:HH:MM:SS`
 #
-# `D`, `HH`, `MM`, `SS` stehen für Tage, Stunden, Minuten und Sekunden. Die Stunden, Minuten und Sekunden sollen in der Ausgabe so formatiert werden, dass sie genau zwei Zeichen einnehmen und mit einer `0` beginnen, falls das notwendig sein sollte. Nutzen Sie hierfür die Formatierung `{Variable:0N}` (`N` steht hier für die Anzahl der angezeigten Zeichen) bei der Verwendung von `print`.
+# `D`, `HH`, `MM`, `SS` stehen für Tage, Stunden, Minuten und Sekunden. Die Stunden, Minuten und Sekunden sollen in der Ausgabe so formatiert werden, dass sie genau zwei Zeichen einnehmen und mit einer `0` beginnen, falls das notwendig sein sollte. Nutzen Sie hierfür die Formatierung `{woerter_zu_zaehlen:0N}` (`N` steht hier für die Anzahl der angezeigten Zeichen) bei der Verwendung von `print`.
 #
 # **Beispiel**
 #

@@ -23,7 +23,7 @@ number = int(input("Eingabe Benutzer:"))
 #Set für die einzigartigen Zahlen
 number_set = set()
 
-#Variable für die SUmme
+#woerter_zu_zaehlen für die SUmme
 total = 0
 
 #For-Schleife zum iterieren der Eingabe

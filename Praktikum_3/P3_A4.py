@@ -5,7 +5,7 @@ L3 = ['P', 'y', 't', 'h', 'o', 'n']
 
 def cleaner(zu_reinigen):
 
-    # Variablen für die neue gereinigte Liste und die Länge zum Durchlaufen der Liste
+    # woerter_zu_zaehlenn für die neue gereinigte Liste und die Länge zum Durchlaufen der Liste
     gereinigte_liste = []
     laenge = len(zu_reinigen)
 
