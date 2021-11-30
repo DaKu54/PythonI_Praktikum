@@ -1,14 +1,18 @@
 import re
 
 def filter_alphanumeric(eingabe):
-    eingabe = re.sub('\W+', ' ', eingabe)  # es wird nach allen nicht Alphanumerischen Zeichen(Sondernzeichen) im String gesucht und entfernt
+    #Alphanummerische Zeichen mit Regex rausfiltern und zurückgeben
+    eingabe = re.sub('\W+', ' ', eingabe)
     return eingabe
 
 def longest_word(eingabe2):
+    #Alphanum Zeichen rausfiltern und in eine Liste aufsplitten
     gefiltert = filter_alphanumeric(eingabe2)
     word_list = gefiltert.split()
 
+    #Variable, um die maximale Laenge eines Wortes zu finden
     max_len = len(max(word_list, key=len))
+    #Alle Wörter mit der maximalen Laenge rausfiltern
     max_words = {word for word in word_list if len(word)==max_len}
 
     return (max_len, max_words)

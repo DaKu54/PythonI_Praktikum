@@ -1,12 +1,17 @@
 def count_words(liste_mit_sachen):
-    liste_mit_sachen = [str(int) for int in liste_mit_sachen]
+    #Alle vorhandenen Elemente in Strings umwandeln
+    liste_mit_sachen = [str(woerter) for woerter in liste_mit_sachen]
     gezaehlte_woerter = {words:liste_mit_sachen.count(words) for words in liste_mit_sachen}
     return gezaehlte_woerter
 
 def count_capital_words(*woerter_zu_zaehlen):
-    woerter_zu_zaehlen = list(str(int) for int in woerter_zu_zaehlen)
+    #Liste erstellen und alles in Strings umwandlen
+    woerter_zu_zaehlen = list(str(woerter) for woerter in woerter_zu_zaehlen)
+    #Leerzeichen entfernen
     woerter_zu_zaehlen = [zeichen.strip() for zeichen in woerter_zu_zaehlen]
+    #If-Anweisung für Großbuchsten und im Alphabet vorhanden
     woerter_zu_zaehlen = [zeichen for zeichen in woerter_zu_zaehlen if zeichen.istitle() and zeichen[0].isalpha()]
+    #ALle Wörter zählen
     woerter_zu_zaehlen = count_words(woerter_zu_zaehlen)
     return woerter_zu_zaehlen
 
