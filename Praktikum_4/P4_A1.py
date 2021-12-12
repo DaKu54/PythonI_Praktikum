@@ -12,6 +12,7 @@ def morse_code(eingabe):
 
     #mit der Stringbibliothek lassen sich alle benötigten Sachen holen und zusammenführen
     buchst_und_zahlen = list(string.ascii_uppercase) + list(string.digits)
+    print(list(string.digits))
     morse_zeichen_uebersetzung = {k:v for k, v in zip(buchst_und_zahlen, morse)}
 
     #Wort/Satz übersetzung und zurückgeben
