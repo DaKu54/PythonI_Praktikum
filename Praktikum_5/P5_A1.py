@@ -4,6 +4,7 @@ PATHS = ['./files/python_1.txt', './files/python_2.txt']
 OUTPUT_FILE = './files/cat.txt'
 
 def concatenate(PATHS):
+
     with open(OUTPUT_FILE, 'w+') as writeFile:
         for file in PATHS:
             with open(file) as inputFile:
