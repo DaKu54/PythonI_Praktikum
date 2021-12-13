@@ -1,38 +1,34 @@
 import collections
+import tarfile
 from collections import Counter
 import re
 ALPH = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ"
 
-WORD = 'Dieser Text ist nur ein Test!'
-
-def read_words(file_to_clean):
-    with open(file_to_clean, 'r') as file:
-        data = file.read().replace('\n', '')
-        data = data.replace(" ", "")
-
-    data = ''.join([i for i in data if not i.isdigit()])
-    data = data.upper()
-
-    cleaned_words = re.findall('[A-ZÄÜÖ]', data)
-
-    return cleaned_words
+def read_words(file_path):
+    with open(file_path, encoding='utf8') as f:
+        words = f.read().upper()
+    words = re.sub(r'[0-9_]','', words)
+    words = re.findall(r'\w+',words)
+    return words
 
 def least_used_letter(file_to_investigate):
-    word_list = read_words(file_to_investigate)
-    print(word_list)
+    cleaned = read_words(file_to_investigate)
+    d = dict.fromkeys(ALPH, 0)
+    for word in cleaned:
+        unique = set(word)
+        for i in unique:
+            d[i] += 1
+    num_words = len(cleaned)
+    smallest = min (d, key=d.get)
+    count = d[smallest]
+    return smallest, (count/num_words) * 100
 
-    all_freq = {}
-    for i in word_list:
-        if i in all_freq:
-            all_freq[i] += 1
-        else:
-            all_freq[i] = 1
-    res = min(all_freq, key=all_freq.get)
+FILE_PATH = './files/words.txt'
+ALPH = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ"
 
-    print(res)
-    #res = Counter(word_list)
-    #res = min(res, key=res.get)
-    #least_common = collections.Counter(word_list).most_common()[-1]
-    #print(least_common)
-
-least_used_letter('./files/words.txt')
+assert len(read_words(FILE_PATH)) == 146
+assert ALPH in read_words(FILE_PATH)
+char, percent = least_used_letter(FILE_PATH)
+assert char == 'J'
+assert 2.0 < percent < 2.1
+assert least_used_letter('./files/python_2.txt')[0] == 'Q'
