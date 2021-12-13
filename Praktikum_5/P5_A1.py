@@ -1,26 +1,21 @@
+import os.path
 # Lösen Sie Aufgabe 1 in dieser Zelle
 PATHS = ['./files/python_1.txt', './files/python_2.txt']
-OUTPUT_FILE = 'cat.txt'
-OUTPUT_FILE_PATH = './files/' + OUTPUT_FILE
+OUTPUT_FILE = './files/cat.txt'
 
 def concatenate(PATHS):
-    readFiles = ['firstFile.txt', 'secFile.txt']
-
-    with open(OUTPUT_FILE_PATH, 'w+') as writeFile:
-        for file in readFiles:
+    with open(OUTPUT_FILE, 'w+') as writeFile:
+        for file in PATHS:
             with open(file) as inputFile:
                 writeFile.write(inputFile.read())
             writeFile.write("\n")
-    num_lines = sum(1 for line in open('cat.txt'))
-
+    num_lines = sum(1 for line in open(OUTPUT_FILE))
     return num_lines
 
 PATHS = ['./files/python_1.txt', './files/python_2.txt']
-OUTPUT_FILE = 'cat.txt'
+OUTPUT_FILE = './files/cat.txt'
 
 import os.path
-
-print(OUTPUT_FILE_PATH)
 
 assert os.path.isfile(OUTPUT_FILE)
 assert concatenate(PATHS) == 16
