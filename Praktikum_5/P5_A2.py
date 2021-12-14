@@ -1,7 +1,9 @@
 def add_line_numbers(file_to_add_line_numbers):
+    #erster File-Stream um alle Zeilen rauszulesen
     with open(file_to_add_line_numbers, 'r') as program:
         data = program.readlines()
 
+    #zweiter Filestream um die Zeilen mit Nummern reinzuschreiben
     with open(file_to_add_line_numbers, 'w') as program:
         for (number, line) in enumerate(data):
             program.write('%d  %s' % (number + 1, line))
